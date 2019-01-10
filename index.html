@@ -20,10 +20,9 @@
 			window.adb_site_cat = '24' ;
 		</script>
 		<script id="crt_adb_place" type="text/javascript" src="/.s/src/crit_image.js?v=5" async></script>
-	<!DOCTYPE html>
 <html>
 <head>
-<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
 
 <style>
 
@@ -104,300 +103,300 @@
 </head>
 
 <body>
-<div id="map" style="width:50%;height:100%;display:none;"></div>
-<div id="viewMap" style="width:50%;height:100%;display:none;"></div>
+	<div id="map" style="width:50%;height:100%;display:none;"></div>
+	<div id="viewMap" style="width:50%;height:100%;display:none;"></div>
 
 
-<div id='imgDiv' style="top:0%;left:50%;width:50%;height:50%;"></div>
-<div id='imgDiv2' style="top:50%;left:50%;width:50%;height:50%;"></div>
-<div id='nameDiv'></div>
+	<div id='imgDiv' style="top:0%;left:50%;width:50%;height:50%;"></div>
+	<div id='imgDiv2' style="top:50%;left:50%;width:50%;height:50%;"></div>
+	<div id='nameDiv'></div>
 
 
-<div id="googleMap" style="width:100%;height:100%;">
-</div>
+	<div id="googleMap" style="width:100%;height:100%;">
+	</div>
 
-<hr>
+	<hr>
 
-<figure>
- <img class="imgg" src="https://farm1.staticflickr.com/673/23749611221_d0aefcb9e3_k.jpg">
- <figcaption> BROADWAY SOUTH TO STEEL</figcaption>
-</figure>
+	<figure>
+	 <img class="imgg" src="https://farm1.staticflickr.com/673/23749611221_d0aefcb9e3_k.jpg">
+	 <figcaption> BROADWAY SOUTH TO STEEL</figcaption>
+	</figure>
 
 
-<figure>
- <img class="imgg" src="https://farm6.staticflickr.com/5638/23723692182_666bce37b3_k.jpg">
- <figcaption> STEEL NORTH TO BROADWAY THEN FREMONT</figcaption>
-</figure>
+	<figure>
+	 <img class="imgg" src="https://farm6.staticflickr.com/5638/23723692182_666bce37b3_k.jpg">
+	 <figcaption> STEEL NORTH TO BROADWAY THEN FREMONT</figcaption>
+	</figure>
 
-<hr>
-<hr>
+	<hr>
+	<hr>
 
 
-<h1>four more &nbsp blocks &nbsp plus &nbsp the one &nbsp in &nbsp my brain </h1>
-<hr>
+	<h1>four more &nbsp blocks &nbsp plus &nbsp the one &nbsp in &nbsp my brain </h1>
+	<hr>
 
 
-<figure>
- <img class="imgg" src="https://farm6.staticflickr.com/5718/23464011569_db71a122c0_k.jpg">
- <figcaption> GO BY TRAIN</figcaption>
-</figure>
+	<figure>
+	 <img class="imgg" src="https://farm6.staticflickr.com/5718/23464011569_db71a122c0_k.jpg">
+	 <figcaption> GO BY TRAIN</figcaption>
+	</figure>
 
 
-<figure>
- <img class="imgg" src="https://farm1.staticflickr.com/777/23723674302_d8a598957b_k.jpg">
- <figcaption> PORTLAND'S BART</figcaption>
-</figure>
+	<figure>
+	 <img class="imgg" src="https://farm1.staticflickr.com/777/23723674302_d8a598957b_k.jpg">
+	 <figcaption> PORTLAND'S BART</figcaption>
+	</figure>
 
-<figure>
- <img class="imgg" src="https://farm1.staticflickr.com/769/23805972516_a1d68d442d_k.jpg">
- <figcaption>YESTERDAYDREAM WAS JUST A WASTE OF TIME</figcaption>
-</figure>
-
-<figure>
- <img class="imgg" src="https://farm1.staticflickr.com/764/23541091400_6f3229ef50_k.jpg">
- <figcaption>PUBLIC PARKS SUBWAY CARS WHERE I GREW UP</figcaption>
-</figure>
-
-
-<figure>
- <img class="imgg" src="https://farm6.staticflickr.com/5751/23728361352_5101f74a62_k.jpg">
- <figcaption>MT TABOR RESERVOIR NO 6</figcaption>
-</figure>
-
-<figure>
- <img class="imgg" src="https://farm1.staticflickr.com/591/23728418762_b612267ae0_k.jpg">
- <figcaption>ROSE CITY ON THE 409</figcaption>
-</figure>
-
-<figure>
- <img class="imgg" src="https://farm1.staticflickr.com/682/23810660006_2393770bae_k.jpg">
- <figcaption>BRIDGE <||> TUNNEL</figcaption>
-</figure>
-
-
-<figure>
- <img class="imgg" src="https://farm1.staticflickr.com/769/23728415602_57c9fd911d_k.jpg">
- <figcaption>THANKS FOR RIDING THE TRAIN DO COME BACK AGAIN</figcaption>
-</figure>
-
-<script>
-	var map;
-	var imgDiv;
-	var imgDiv2;
-	var nameDiv;
-	var streetViewMap;
-	var viewMap;
-
-	function initialize() {
-	 var mapProp = {
-	 center:new google.maps.LatLng(45.518734,-122.6160285),
-	 zoom:13,
-	 mapTypeId:google.maps.MapTypeId.SATELLITE
-	 };
-	 map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
-	 map.setOptions({draggable: false, zoomControl: false, scrollwheel: false, disableDoubleClickZoom: true});
-
-	 init();
-	}
-	google.maps.event.addDomListener(window, 'load', initialize);
-
-
-	function init() {
-	 Bridge.buildBridges();
-	 addImgDiv();
-	 addImgDiv2();
-	 addNameDiv();
-	 Bridge.addMarkers();
-	};
-
-	function addImgDiv() {
-	 imgDiv = document.getElementById('imgDiv');
-	 if (imgDiv == null) {
-	 imgDiv = document.createElement('div');
-	 imgDiv.id = 'imgDiv';
-	 }
-
-	 /*imgDiv.innerHTML = "<img src='http://www.bridgestories.com/bridgebios/images/bridges/ross_island_bridge.jpg'><a href='http://www.bridgestories.com/bridgebios/images/bridges/ross_island_bridge.jpg' target='_blank'><h2>--></h2></a>";*/
-
-	 initializeStreetViewMap(imgDiv);
-
-	 map.controls[google.maps.ControlPosition.TOP_RIGHT].push(imgDiv);
-
-	};
-
-	function initializeStreetViewMap(imgDiv) {
-	 var mapProp = {
-	 center:new google.maps.LatLng(45.518734,-122.6160285),
-	 zoom:13,
-	 mapTypeId:google.maps.MapTypeId.SATELLITE
-	 };
-
-	 streetViewMap = new google.maps.Map(document.getElementById('map'), mapProp);
-	 var panorama = new google.maps.StreetViewPanorama(
-	 imgDiv, {
-	 position: new google.maps.LatLng(45.5133615,-122.6710871),
-	 pov: {
-	 heading: 130,
-	 pitch: 10
-	 }
-	 });
-	 streetViewMap.setStreetView(panorama);
-	};
-
-	function setStreetViewMap(bridge) {
-	 var panorama = new google.maps.StreetViewPanorama(
-	 imgDiv, {
-	 position: new google.maps.LatLng(bridge.svLat,bridge.svLng),
-	 pov: {
-	 heading: bridge.svHead,
-	 pitch: bridge.svPitch,
-	 zoom: bridge.svZoom
-	 }
-	 });
-	 streetViewMap.setStreetView(panorama);
-	};
-
-	function addImgDiv2() {
-	 imgDiv2 = document.getElementById('imgDiv2');
-	 if (imgDiv2 == null) {
-	 imgDiv2 = document.createElement('div');
-	 imgDiv2.id = 'imgDiv2';
-	 }
-
-	 initializeViewMap(imgDiv2);
-
-	 map.controls[google.maps.ControlPosition.BOTTOM_RIGHT].push(imgDiv2);
-
-	};
-
-	function initializeViewMap(imgDiv2) {
-	 var mapProp = {
-	 center:new google.maps.LatLng(45.518734,-122.6160285),
-	 zoom:13,
-	 mapTypeId:google.maps.MapTypeId.SATELLITE
-	 };
-
-	 viewMap = new google.maps.Map(document.getElementById('map'), mapProp);
-	 var panorama = new google.maps.StreetViewPanorama(
-	 imgDiv2, {
-	 position: new google.maps.LatLng(45.5133615,-122.6710871),
-	 pov: {
-	 heading: 130,
-	 pitch: 10
-	 }
-	 });
-	 viewMap.setStreetView(panorama);
-	};
-
-	function setViewMap(bridge) {
-	 var panorama = new google.maps.StreetViewPanorama(
-	 imgDiv2, {
-	 position: new google.maps.LatLng(bridge.vLat,bridge.vLng),
-	 pov: {
-	 heading: bridge.vHead,
-	 pitch: bridge.vPitch,
-	 zoom: bridge.vZoom
-	 }
-	 });
-	 viewMap.setStreetView(panorama);
-	};
-
-	function addNameDiv() {
-	 nameDiv = document.getElementById('nameDiv');
-	 if (nameDiv == null) {
-	 nameDiv = document.createElement('div');
-	 nameDiv.id = 'nameDiv';
-	 }
-
-	 nameDiv.innerHTML = "portland bridges".toUpperCase().concat('<p>cross the willamette</p>');
-
-	 map.controls[google.maps.ControlPosition.TOP_LEFT].push(nameDiv);
-	};
-
-	function setNameDiv(bridge) {
-	 nameDiv.innerHTML = bridge.name.toUpperCase();
-	};
-
-
-	//Bridge class
-	var Bridge = function(name, lat, lng, svLat, svLng, svHead, svPitch, svZoom, vLat, vLng, vHead, vPitch, vZoom) {
-	 this.name = name;
-
-	 this.lat = lat;
-	 this.lng = lng;
-
-	 this.svLat = svLat;
-	 this.svLng = svLng;
-	 this.svHead = svHead;
-	 this.svPitch = svPitch;
-	 this.svZoom = svZoom;
-
-	 this.vLat = vLat;
-	 this.vLng = vLng;
-	 this.vHead = vHead;
-	 this.vPitch = vPitch;
-	 this.vZoom = vZoom;
-
-
-	 this.marker;
-	 this.infowindow;
-
-	 Bridge.bridges.push(this);
-	};
-
-	Bridge.bridges = [];
-
-	Bridge.buildBridges = function() {
-
-	 new Bridge('fremont bridge', 45.538093, -122.682801, 45.5373367,-122.6837735, 52, 10, 0, 45.532436,-122.6730647, 310, 0, 3);
-
-	 new Bridge('broadway bridge', 45.531878, -122.674059, 45.5316817,-122.6744066, 60, 10, 0, 45.5276749,-122.6690233, 320, 0, 3);
-
-	 new Bridge('steel bridge', 45.527618, -122.669002, 45.5272539,-122.6699346, 80, 10, 0, 45.5230293,-122.6668002, 341, 0, 3);
-
-	 new Bridge('burnside bridge', 45.523069, -122.667657, 45.5230139,-122.666195, 265, 5, 2.5, 45.5274943,-122.6691368, 168, 5, 2.5);
-
-	 new Bridge('morrison bridge', 45.517838, -122.669620, 45.5179875,-122.6699752, 120, 10, 0, 45.5133287,-122.6709538, 15, 355, 2);
-
-	 new Bridge('hawthorne bridge', 45.513268, -122.670963, 45.5133615,-122.6710871, 130, 10, 0, 45.508966,-122.6674537, 327, 2, 1.9);
-
-	 new Bridge('marquam bridge', 45.508078, -122.668861, 45.5080265,-122.6687871, 70, 10, 0, 45.5131322,-122.6708103, 170, 0, 2);
-
-	 new Bridge('tilikum crossing', 45.505019, -122.666899, 45.5024167,-122.672292, 70, 1, 3, 45.5012671,-122.6640232, 330, 0, 1.5);
-
-	 new Bridge('ross island bridge', 45.501228, -122.664668, 45.5013181,-122.6633513, 250, 5, 0, 45.4990396,-122.6599528, 305, 0, 2);
-
-	};
-
-	Bridge.addMarkers = function() {
-	 for (var i=0; i<Bridge.bridges.length; i++) {
-	 Bridge.bridges[i].addMarker();
-	 };
-	};
-
-	Bridge.prototype.addMarker = function() {
-	 var bridge = this;
-	 this.marker=new google.maps.Marker({
-	 position:new google.maps.LatLng(bridge.lat,bridge.lng),
-	 });
-
-	 this.infowindow = new google.maps.InfoWindow({
-	 content:bridge.name
-	 });
-
-	 google.maps.event.addListener(this.marker,'click',function() {
-	 //bridge.infowindow.open(map,bridge.marker);
-	 setStreetViewMap(bridge);
-	 setViewMap(bridge);
-	 setNameDiv(bridge);
-	 });
-
-	 this.marker.setMap(map);
-
-	};
-
-
-</script>
+	<figure>
+	 <img class="imgg" src="https://farm1.staticflickr.com/769/23805972516_a1d68d442d_k.jpg">
+	 <figcaption>YESTERDAYDREAM WAS JUST A WASTE OF TIME</figcaption>
+	</figure>
+
+	<figure>
+	 <img class="imgg" src="https://farm1.staticflickr.com/764/23541091400_6f3229ef50_k.jpg">
+	 <figcaption>PUBLIC PARKS SUBWAY CARS WHERE I GREW UP</figcaption>
+	</figure>
+
+
+	<figure>
+	 <img class="imgg" src="https://farm6.staticflickr.com/5751/23728361352_5101f74a62_k.jpg">
+	 <figcaption>MT TABOR RESERVOIR NO 6</figcaption>
+	</figure>
+
+	<figure>
+	 <img class="imgg" src="https://farm1.staticflickr.com/591/23728418762_b612267ae0_k.jpg">
+	 <figcaption>ROSE CITY ON THE 409</figcaption>
+	</figure>
+
+	<figure>
+	 <img class="imgg" src="https://farm1.staticflickr.com/682/23810660006_2393770bae_k.jpg">
+	 <figcaption>BRIDGE <||> TUNNEL</figcaption>
+	</figure>
+
+
+	<figure>
+	 <img class="imgg" src="https://farm1.staticflickr.com/769/23728415602_57c9fd911d_k.jpg">
+	 <figcaption>THANKS FOR RIDING THE TRAIN DO COME BACK AGAIN</figcaption>
+	</figure>
+
+	<script>
+		var map;
+		var imgDiv;
+		var imgDiv2;
+		var nameDiv;
+		var streetViewMap;
+		var viewMap;
+
+		function initialize() {
+		 var mapProp = {
+		 center:new google.maps.LatLng(45.518734,-122.6160285),
+		 zoom:13,
+		 mapTypeId:google.maps.MapTypeId.SATELLITE
+		 };
+		 map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+		 map.setOptions({draggable: false, zoomControl: false, scrollwheel: false, disableDoubleClickZoom: true});
+
+		 init();
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+
+
+		function init() {
+		 Bridge.buildBridges();
+		 addImgDiv();
+		 addImgDiv2();
+		 addNameDiv();
+		 Bridge.addMarkers();
+		};
+
+		function addImgDiv() {
+		 imgDiv = document.getElementById('imgDiv');
+		 if (imgDiv == null) {
+		 imgDiv = document.createElement('div');
+		 imgDiv.id = 'imgDiv';
+		 }
+
+		 /*imgDiv.innerHTML = "<img src='http://www.bridgestories.com/bridgebios/images/bridges/ross_island_bridge.jpg'><a href='http://www.bridgestories.com/bridgebios/images/bridges/ross_island_bridge.jpg' target='_blank'><h2>--></h2></a>";*/
+
+		 initializeStreetViewMap(imgDiv);
+
+		 map.controls[google.maps.ControlPosition.TOP_RIGHT].push(imgDiv);
+
+		};
+
+		function initializeStreetViewMap(imgDiv) {
+		 var mapProp = {
+		 center:new google.maps.LatLng(45.518734,-122.6160285),
+		 zoom:13,
+		 mapTypeId:google.maps.MapTypeId.SATELLITE
+		 };
+
+		 streetViewMap = new google.maps.Map(document.getElementById('map'), mapProp);
+		 var panorama = new google.maps.StreetViewPanorama(
+		 imgDiv, {
+		 position: new google.maps.LatLng(45.5133615,-122.6710871),
+		 pov: {
+		 heading: 130,
+		 pitch: 10
+		 }
+		 });
+		 streetViewMap.setStreetView(panorama);
+		};
+
+		function setStreetViewMap(bridge) {
+		 var panorama = new google.maps.StreetViewPanorama(
+		 imgDiv, {
+		 position: new google.maps.LatLng(bridge.svLat,bridge.svLng),
+		 pov: {
+		 heading: bridge.svHead,
+		 pitch: bridge.svPitch,
+		 zoom: bridge.svZoom
+		 }
+		 });
+		 streetViewMap.setStreetView(panorama);
+		};
+
+		function addImgDiv2() {
+		 imgDiv2 = document.getElementById('imgDiv2');
+		 if (imgDiv2 == null) {
+		 imgDiv2 = document.createElement('div');
+		 imgDiv2.id = 'imgDiv2';
+		 }
+
+		 initializeViewMap(imgDiv2);
+
+		 map.controls[google.maps.ControlPosition.BOTTOM_RIGHT].push(imgDiv2);
+
+		};
+
+		function initializeViewMap(imgDiv2) {
+		 var mapProp = {
+		 center:new google.maps.LatLng(45.518734,-122.6160285),
+		 zoom:13,
+		 mapTypeId:google.maps.MapTypeId.SATELLITE
+		 };
+
+		 viewMap = new google.maps.Map(document.getElementById('map'), mapProp);
+		 var panorama = new google.maps.StreetViewPanorama(
+		 imgDiv2, {
+		 position: new google.maps.LatLng(45.5133615,-122.6710871),
+		 pov: {
+		 heading: 130,
+		 pitch: 10
+		 }
+		 });
+		 viewMap.setStreetView(panorama);
+		};
+
+		function setViewMap(bridge) {
+		 var panorama = new google.maps.StreetViewPanorama(
+		 imgDiv2, {
+		 position: new google.maps.LatLng(bridge.vLat,bridge.vLng),
+		 pov: {
+		 heading: bridge.vHead,
+		 pitch: bridge.vPitch,
+		 zoom: bridge.vZoom
+		 }
+		 });
+		 viewMap.setStreetView(panorama);
+		};
+
+		function addNameDiv() {
+		 nameDiv = document.getElementById('nameDiv');
+		 if (nameDiv == null) {
+		 nameDiv = document.createElement('div');
+		 nameDiv.id = 'nameDiv';
+		 }
+
+		 nameDiv.innerHTML = "portland bridges".toUpperCase().concat('<p>cross the willamette</p>');
+
+		 map.controls[google.maps.ControlPosition.TOP_LEFT].push(nameDiv);
+		};
+
+		function setNameDiv(bridge) {
+		 nameDiv.innerHTML = bridge.name.toUpperCase();
+		};
+
+
+		//Bridge class
+		var Bridge = function(name, lat, lng, svLat, svLng, svHead, svPitch, svZoom, vLat, vLng, vHead, vPitch, vZoom) {
+		 this.name = name;
+
+		 this.lat = lat;
+		 this.lng = lng;
+
+		 this.svLat = svLat;
+		 this.svLng = svLng;
+		 this.svHead = svHead;
+		 this.svPitch = svPitch;
+		 this.svZoom = svZoom;
+
+		 this.vLat = vLat;
+		 this.vLng = vLng;
+		 this.vHead = vHead;
+		 this.vPitch = vPitch;
+		 this.vZoom = vZoom;
+
+
+		 this.marker;
+		 this.infowindow;
+
+		 Bridge.bridges.push(this);
+		};
+
+		Bridge.bridges = [];
+
+		Bridge.buildBridges = function() {
+
+		 new Bridge('fremont bridge', 45.538093, -122.682801, 45.5373367,-122.6837735, 52, 10, 0, 45.532436,-122.6730647, 310, 0, 3);
+
+		 new Bridge('broadway bridge', 45.531878, -122.674059, 45.5316817,-122.6744066, 60, 10, 0, 45.5276749,-122.6690233, 320, 0, 3);
+
+		 new Bridge('steel bridge', 45.527618, -122.669002, 45.5272539,-122.6699346, 80, 10, 0, 45.5230293,-122.6668002, 341, 0, 3);
+
+		 new Bridge('burnside bridge', 45.523069, -122.667657, 45.5230139,-122.666195, 265, 5, 2.5, 45.5274943,-122.6691368, 168, 5, 2.5);
+
+		 new Bridge('morrison bridge', 45.517838, -122.669620, 45.5179875,-122.6699752, 120, 10, 0, 45.5133287,-122.6709538, 15, 355, 2);
+
+		 new Bridge('hawthorne bridge', 45.513268, -122.670963, 45.5133615,-122.6710871, 130, 10, 0, 45.508966,-122.6674537, 327, 2, 1.9);
+
+		 new Bridge('marquam bridge', 45.508078, -122.668861, 45.5080265,-122.6687871, 70, 10, 0, 45.5131322,-122.6708103, 170, 0, 2);
+
+		 new Bridge('tilikum crossing', 45.505019, -122.666899, 45.5024167,-122.672292, 70, 1, 3, 45.5012671,-122.6640232, 330, 0, 1.5);
+
+		 new Bridge('ross island bridge', 45.501228, -122.664668, 45.5013181,-122.6633513, 250, 5, 0, 45.4990396,-122.6599528, 305, 0, 2);
+
+		};
+
+		Bridge.addMarkers = function() {
+		 for (var i=0; i<Bridge.bridges.length; i++) {
+		 Bridge.bridges[i].addMarker();
+		 };
+		};
+
+		Bridge.prototype.addMarker = function() {
+		 var bridge = this;
+		 this.marker=new google.maps.Marker({
+		 position:new google.maps.LatLng(bridge.lat,bridge.lng),
+		 });
+
+		 this.infowindow = new google.maps.InfoWindow({
+		 content:bridge.name
+		 });
+
+		 google.maps.event.addListener(this.marker,'click',function() {
+		 //bridge.infowindow.open(map,bridge.marker);
+		 setStreetViewMap(bridge);
+		 setViewMap(bridge);
+		 setNameDiv(bridge);
+		 });
+
+		 this.marker.setMap(map);
+
+		};
+
+
+	</script>
 
 </body>
 </html>
