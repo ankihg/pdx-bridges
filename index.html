@@ -23,7 +23,162 @@
 	<!DOCTYPE html>
 <html>
 <head>
-<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+<style>
+
+	body {
+	 #background-color: black;
+	 #color: 00ff00;
+	 font-family: "Comic Sans MS";
+	}
+
+	#imgDiv {
+	 position: absolute;
+	 color: black;
+	 border-style: solid;
+	}
+
+	#imgDiv2 {
+	 position: absolute;
+	 color: black;
+	 border-style: solid;
+	}
+
+	#nameDiv {
+	 margin-left: 5%;
+	 margin-top: 1%;
+	 padding: 1%;
+	 color: white;
+	 background-color: rgba(0, 0, 0, 0);
+	 font-size: 400%;
+	 font-weight: bold;
+	 line-height: 20%;
+	}
+
+	#nameDiv p {
+	 text-align: right;
+	 font-size: 50%;
+	 font-weight: normal;
+	 line-height: 10%;
+	}
+
+
+	#map, #viewMap {
+	 float: left;
+	 height: 100%;
+	 width: 45%;
+	}
+
+	.imgg {
+	 width: 100%;
+	 display: inline;
+	}
+
+	figure
+	{
+	 display: inline;
+	 width:48%;
+	 float:left;
+	 margin:1%;
+	 text-align:center;
+	 padding:0px;
+	}
+
+	figcaption {
+	 font-weight: "medium";
+	 font-family: "Comic Sans MS";
+	}
+
+	h1 {
+	 text-align:center;
+	}
+
+	h3 {
+	 text-align:center;
+	}
+</style>
+
+
+<link type="text/css" rel="stylesheet" href="/.s/src/social.css" />
+</head>
+
+<body>
+<div id="map" style="width:50%;height:100%;display:none;"></div>
+<div id="viewMap" style="width:50%;height:100%;display:none;"></div>
+
+
+<div id='imgDiv' style="top:0%;left:50%;width:50%;height:50%;"></div>
+<div id='imgDiv2' style="top:50%;left:50%;width:50%;height:50%;"></div>
+<div id='nameDiv'></div>
+
+
+<div id="googleMap" style="width:100%;height:100%;">
+</div>
+
+<hr>
+
+<figure>
+ <img class="imgg" src="https://farm1.staticflickr.com/673/23749611221_d0aefcb9e3_k.jpg">
+ <figcaption> BROADWAY SOUTH TO STEEL</figcaption>
+</figure>
+
+
+<figure>
+ <img class="imgg" src="https://farm6.staticflickr.com/5638/23723692182_666bce37b3_k.jpg">
+ <figcaption> STEEL NORTH TO BROADWAY THEN FREMONT</figcaption>
+</figure>
+
+<hr>
+<hr>
+
+
+<h1>four more &nbsp blocks &nbsp plus &nbsp the one &nbsp in &nbsp my brain </h1>
+<hr>
+
+
+<figure>
+ <img class="imgg" src="https://farm6.staticflickr.com/5718/23464011569_db71a122c0_k.jpg">
+ <figcaption> GO BY TRAIN</figcaption>
+</figure>
+
+
+<figure>
+ <img class="imgg" src="https://farm1.staticflickr.com/777/23723674302_d8a598957b_k.jpg">
+ <figcaption> PORTLAND'S BART</figcaption>
+</figure>
+
+<figure>
+ <img class="imgg" src="https://farm1.staticflickr.com/769/23805972516_a1d68d442d_k.jpg">
+ <figcaption>YESTERDAYDREAM WAS JUST A WASTE OF TIME</figcaption>
+</figure>
+
+<figure>
+ <img class="imgg" src="https://farm1.staticflickr.com/764/23541091400_6f3229ef50_k.jpg">
+ <figcaption>PUBLIC PARKS SUBWAY CARS WHERE I GREW UP</figcaption>
+</figure>
+
+
+<figure>
+ <img class="imgg" src="https://farm6.staticflickr.com/5751/23728361352_5101f74a62_k.jpg">
+ <figcaption>MT TABOR RESERVOIR NO 6</figcaption>
+</figure>
+
+<figure>
+ <img class="imgg" src="https://farm1.staticflickr.com/591/23728418762_b612267ae0_k.jpg">
+ <figcaption>ROSE CITY ON THE 409</figcaption>
+</figure>
+
+<figure>
+ <img class="imgg" src="https://farm1.staticflickr.com/682/23810660006_2393770bae_k.jpg">
+ <figcaption>BRIDGE <||> TUNNEL</figcaption>
+</figure>
+
+
+<figure>
+ <img class="imgg" src="https://farm1.staticflickr.com/769/23728415602_57c9fd911d_k.jpg">
+ <figcaption>THANKS FOR RIDING THE TRAIN DO COME BACK AGAIN</figcaption>
+</figure>
 
 <script>
 	var map;
@@ -243,161 +398,6 @@
 
 
 </script>
-
-<style>
-
-	body {
-	 #background-color: black;
-	 #color: 00ff00;
-	 font-family: "Comic Sans MS";
-	}
-
-	#imgDiv {
-	 position: absolute;
-	 color: black;
-	 border-style: solid;
-	}
-
-	#imgDiv2 {
-	 position: absolute;
-	 color: black;
-	 border-style: solid;
-	}
-
-	#nameDiv {
-	 margin-left: 5%;
-	 margin-top: 1%;
-	 padding: 1%;
-	 color: white;
-	 background-color: rgba(0, 0, 0, 0);
-	 font-size: 400%;
-	 font-weight: bold;
-	 line-height: 20%;
-	}
-
-	#nameDiv p {
-	 text-align: right;
-	 font-size: 50%;
-	 font-weight: normal;
-	 line-height: 10%;
-	}
-
-
-	#map, #viewMap {
-	 float: left;
-	 height: 100%;
-	 width: 45%;
-	}
-
-	.imgg {
-	 width: 100%;
-	 display: inline;
-	}
-
-	figure
-	{
-	 display: inline;
-	 width:48%;
-	 float:left;
-	 margin:1%;
-	 text-align:center;
-	 padding:0px;
-	}
-
-	figcaption {
-	 font-weight: "medium";
-	 font-family: "Comic Sans MS";
-	}
-
-	h1 {
-	 text-align:center;
-	}
-
-	h3 {
-	 text-align:center;
-	}
-
-
-<link type="text/css" rel="stylesheet" href="/.s/src/social.css" />
-</head>
-
-<body>
-<div id="map" style="width:50%;height:100%;display:none;"></div>
-<div id="viewMap" style="width:50%;height:100%;display:none;"></div>
-
-
-<div id='imgDiv' style="top:0%;left:50%;width:50%;height:50%;"></div>
-<div id='imgDiv2' style="top:50%;left:50%;width:50%;height:50%;"></div>
-<div id='nameDiv'></div>
-
-
-<div id="googleMap" style="width:100%;height:100%;">
-</div>
-
-<hr>
-
-<figure>
- <img class="imgg" src="https://farm1.staticflickr.com/673/23749611221_d0aefcb9e3_k.jpg">
- <figcaption> BROADWAY SOUTH TO STEEL</figcaption>
-</figure>
-
-
-<figure>
- <img class="imgg" src="https://farm6.staticflickr.com/5638/23723692182_666bce37b3_k.jpg">
- <figcaption> STEEL NORTH TO BROADWAY THEN FREMONT</figcaption>
-</figure>
-
-<hr>
-<hr>
-
-
-<h1>four more &nbsp blocks &nbsp plus &nbsp the one &nbsp in &nbsp my brain </h1>
-<hr>
-
-
-<figure>
- <img class="imgg" src="https://farm6.staticflickr.com/5718/23464011569_db71a122c0_k.jpg">
- <figcaption> GO BY TRAIN</figcaption>
-</figure>
-
-
-<figure>
- <img class="imgg" src="https://farm1.staticflickr.com/777/23723674302_d8a598957b_k.jpg">
- <figcaption> PORTLAND'S BART</figcaption>
-</figure>
-
-<figure>
- <img class="imgg" src="https://farm1.staticflickr.com/769/23805972516_a1d68d442d_k.jpg">
- <figcaption>YESTERDAYDREAM WAS JUST A WASTE OF TIME</figcaption>
-</figure>
-
-<figure>
- <img class="imgg" src="https://farm1.staticflickr.com/764/23541091400_6f3229ef50_k.jpg">
- <figcaption>PUBLIC PARKS SUBWAY CARS WHERE I GREW UP</figcaption>
-</figure>
-
-
-<figure>
- <img class="imgg" src="https://farm6.staticflickr.com/5751/23728361352_5101f74a62_k.jpg">
- <figcaption>MT TABOR RESERVOIR NO 6</figcaption>
-</figure>
-
-<figure>
- <img class="imgg" src="https://farm1.staticflickr.com/591/23728418762_b612267ae0_k.jpg">
- <figcaption>ROSE CITY ON THE 409</figcaption>
-</figure>
-
-<figure>
- <img class="imgg" src="https://farm1.staticflickr.com/682/23810660006_2393770bae_k.jpg">
- <figcaption>BRIDGE <||> TUNNEL</figcaption>
-</figure>
-
-
-<figure>
- <img class="imgg" src="https://farm1.staticflickr.com/769/23728415602_57c9fd911d_k.jpg">
- <figcaption>THANKS FOR RIDING THE TRAIN DO COME BACK AGAIN</figcaption>
-</figure>
-
 
 </body>
 </html>
